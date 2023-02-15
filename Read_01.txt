@@ -1,0 +1,79 @@
+#############
+#Reading 01>#
+#############
+
+
+int main(OSI Layers)
+{
+    /* The OSI model describes seven layers that computer systems 
+       use to communicate over a network*/
+    
+    
+    Layer 7 - Application (It provides interface for the application 
+                           user in order to transmit data);
+
+    Layer 6 - Presentation (It receives data from the Application layer. 
+                            It translates the data into a standardised 
+                            format, as well handling any encryption);
+
+    Layer 5 - Session (It is designed to start and stop communication between 
+                       one endpoint and another. It uses control protocols, or 
+                       tunneling protocols, in order to begin the communication
+                       of data between one device and another);
+
+    Layer 4 - Transport (Its first purpose is to choose the protocol over
+                         which the data is to be transmitted. TCP or UDP.
+                         With a protocol selected, the transport layer then
+                         devides the transmition up into bite-sized pieces.)
+                         {
+                            TCP(Secure, Connection-oriented, Slow, Guaranteed transmition,
+                                Used by critical applications, Flow control);
+                            UDP(Unsecured, Connectionless, Fast, No guarantee,
+                                Used by Real-time applications, No flow control);
+                         }
+
+    Layer 3 - Network (It is reponsible for locating the destination of the request.
+                       At this stage we are working with logical addresses, such as, IPv4, IPv6...
+                       Over TCP these are called segments, over UDP the are called datagrams);
+    
+    Layer 2 - Data Link (It receives the packet from layer 3 and adds the physical address (MAC).
+                         Inside every network enabled computer is a Network Interface Card (NIC)
+                         which comes with a unique MAC to identify it. MACs can be changed, but 
+                         every MAC has a unique IP.);
+
+    Layer 1 - Physical (Its job is to convert the binary data of the transmition signals
+                        and transmit accross the network, as well receiving incoming 
+                        signals and converting them to binary);
+
+
+    Encapsulation (Every protocol has a header and a payload. The entire upper protocol
+                   packet (header + payload) is the payload of the lower one, this __is_identifier
+                   called encapsulation);
+}
+
+int 2nd_main(Networking)
+{
+    Packets (The primary goal of networking is to exchange information between
+             networked computersn this information is carried by packets);
+    Packet Structure (Header (ensures that the receiving host can correctly
+                      interpret the payload) + Payload (the actual information));
+    Routers (Acts like traffic manager in order for the packets run through the
+             internet smoothly);
+}
+
+int 3rd_main (Wireshark)
+{
+    /*Wireshark is an open-source sniffer tool. A sniffer allows you to see
+      the data transmitted over the network to and from your computer*/
+
+    Colours meaning
+    {
+        Light purple - TCP;
+        Light blue - UDP;
+        Black - Packets with errors;
+        Light green - HTTP traffic;
+        Light yellow - Windows-specific traffic, including Server Message Blocks (SMB) and NetBIOS;
+        Dark yellow - Routing;
+        Dark gray - TCP SYN, FIN and ACK traffic;
+    }
+}
